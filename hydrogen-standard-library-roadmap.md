@@ -1,4 +1,6 @@
-# Hydrogen Standard Library Roadmap
+# Hydrogen standard-library design plan
+
+This document proposes future packages and APIs. None of the `Hydrogen.*` or `Australis.*` library layers shown here are installable implementations in this repository. Existing compiler/runtime `System.*` builtins are documented in the [usage guide](README.md) and [API reference](https://aurora-softwares.github.io/Hylang-Docs/runtime/builtins). Code in this plan illustrates proposed contracts rather than runnable current examples.
 
 ## Goal
 
