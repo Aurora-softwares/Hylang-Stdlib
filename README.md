@@ -4,7 +4,7 @@
 
 This repository contains the standard-library design plan. It does not yet contain installable `.hyproj` library implementations. Existing `System.*` APIs are built into the [Hydrogen compiler runtimes](https://github.com/Aurora-Softwares/Hylang-Compiler).
 
-For available APIs and exact compiler-route support, use the [builtin reference](https://aurora-softwares.github.io/Hylang-Docs/runtime/builtins) and [compiler support table](https://aurora-softwares.github.io/Hylang-Docs/getting-started/compiler-options).
+For available APIs and exact compiler-route support, use the [builtin reference](https://aurora-softwares.github.io/Hylang-Docs/runtime/builtins) and [current release guide](https://aurora-softwares.github.io/Hylang-Docs/getting-started/current-release/).
 
 ## Use the existing builtins
 
@@ -21,12 +21,12 @@ public class Program {
 }
 ```
 
-This complete program creates/replaces `message.txt` in the process working directory. Save it as `example.hy` in a compiler checkout and compile on Linux x86-64:
+This complete program creates/replaces `message.txt` in the process working directory. Save it as `example.hy` and compile it with the released Linux x86-64 compiler:
 
 ```bash
-./build/self_hosting/hydrogen-stage1 compile example.hy -o build/example
-chmod +x build/example
-./build/example
+hy compile example.hy -o example
+chmod +x example
+./example
 ```
 
 Native names should be fully qualified. Strings are byte-based, file reads require seekable files in the native runtime, and failed native I/O terminates with an error.
@@ -37,7 +37,7 @@ Native names should be fully qualified. Strings are byte-based, file reads requi
 | --- | --- |
 | `System.Console.Write`/`WriteLine` | Native and SDK |
 | `System.IO.File` text/bytes/existence | Native and SDK |
-| `System.Convert.ToInt32` | Native and SDK; returns Hydrogen's 64-bit `int` |
+| `System.Convert.ToInt32` | Native and SDK; returns `int` (32-bit in the current native release) |
 | `System.Runtime.GC.Collect`/`GetAllocatedBytes` | Native source APIs |
 | `System.Collections.List<T>` | SDK builtin only |
 | `System.Runtime.Buffer`, `Memory`, `BinaryPrimitives` | SDK builtins only |
