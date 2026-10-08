@@ -1,5 +1,7 @@
 # Hydrogen standard library
 
+<img src="assets/hydrogen.icon.svg" style="display: block;margin-left: auto; margin-right: auto; width: 30%;" />
+
 This repository contains the standard-library design plan. It does not yet contain installable `.hyproj` library implementations. Existing `System.*` APIs are built into the [Hydrogen compiler runtimes](https://github.com/Aurora-Softwares/Hylang-Compiler).
 
 For available APIs and exact compiler-route support, use the [builtin reference](https://aurora-softwares.github.io/Hylang-Docs/runtime/builtins) and [compiler support table](https://aurora-softwares.github.io/Hylang-Docs/getting-started/compiler-options).
