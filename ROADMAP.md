@@ -37,7 +37,7 @@ Every library layer should clearly state:
 
 ---
 
-# Phase 0 — Standard Library Foundations
+# Phase 0 - Standard Library Foundations
 
 ## Purpose
 
@@ -91,7 +91,7 @@ public function Main(): int {
 
 ---
 
-# Phase 1 — Hydrogen.Core
+# Phase 1 - Hydrogen.Core
 
 ## Purpose
 
@@ -254,7 +254,7 @@ function Main(): int {
 
 ---
 
-# Phase 2 — Hydrogen.Memory
+# Phase 2 - Hydrogen.Memory
 
 ## Purpose
 
@@ -401,7 +401,7 @@ function Main(): int {
 
 ---
 
-# Phase 3 — Hydrogen.Text
+# Phase 3 - Hydrogen.Text
 
 ## Purpose
 
@@ -535,7 +535,7 @@ function Main(): int {
 
 ---
 
-# Phase 4 — Hydrogen.Runtime
+# Phase 4 - Hydrogen.Runtime
 
 ## Purpose
 
@@ -653,7 +653,7 @@ public function Main(): int {
 
 ---
 
-# Phase 5 — Australis.Kernel
+# Phase 5 - Australis.Kernel
 
 ## Purpose
 
@@ -788,7 +788,7 @@ function KernelStart(info: ptr<BootInfo>): void {
 
 ---
 
-# Phase 6 — Hydrogen.IO
+# Phase 6 - Hydrogen.IO
 
 ## Purpose
 
@@ -888,7 +888,7 @@ function Main(): int {
 
 ---
 
-# Phase 7 — Australis.Userspace
+# Phase 7 - Australis.Userspace
 
 ## Purpose
 
@@ -992,7 +992,7 @@ function Main(): int {
 
 ---
 
-# Phase 8 — Australis.UI
+# Phase 8 - Australis.UI
 
 ## Purpose
 
@@ -1118,7 +1118,7 @@ function Main(): int {
 
 ---
 
-# Phase 9 — Full Standard Library Hardening
+# Phase 9 - Full Standard Library Hardening
 
 ## Purpose
 
@@ -1222,7 +1222,7 @@ The standard library feels usable by someone other than you.
 
 ---
 
-# Phase 10 — Complete v1 Standard Library
+# Phase 10 - Complete v1 Standard Library
 
 ## Purpose
 
