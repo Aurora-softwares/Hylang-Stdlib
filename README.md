@@ -39,9 +39,11 @@ Native names should be fully qualified. Strings are byte-based, file reads requi
 
 | Family | Available implementation |
 | --- | --- |
-| `System.Console.Write`/`WriteLine` | Native and SDK |
-| `System.IO.File` text/bytes/existence | Native and SDK |
-| `System.Convert.ToInt32` | Native and SDK; returns `int` (32-bit in the current native release) |
+| `System.Console.Write`/`WriteLine` | Native, AUEX, and SDK |
+| `System.Console.ReadLine` | AUEX |
+| `System.IO.File` text/existence | Native, AUEX, and SDK; AUEX text is limited to 255 bytes |
+| `System.IO.File` byte arrays | Native and SDK |
+| `System.Convert.ToInt32` | Native, AUEX, and SDK; returns `int` |
 | `System.Runtime.GC.Collect`/`GetAllocatedBytes` | Native source APIs |
 | `System.Collections.List<T>` | SDK builtin only |
 | `System.Runtime.Buffer`, `Memory`, `BinaryPrimitives` | SDK builtins only |

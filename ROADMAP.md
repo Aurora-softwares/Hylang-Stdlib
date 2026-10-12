@@ -800,6 +800,10 @@ For userspace apps, it talks to Australis OS services.
 For hosted builds, it may talk to the host platform.
 For kernel builds, it should generally be unavailable or replaced by kernel debug output.
 
+Application source uses one recognizable API surface. Each backend maps that
+surface to its platform runtime or operating-system calls. Target namespaces
+are reserved for capabilities whose behavior cannot be expressed portably.
+
 ## Modules
 
 ```text
