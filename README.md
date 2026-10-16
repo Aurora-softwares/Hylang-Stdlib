@@ -53,4 +53,4 @@ The SDK supplies broader generic/unsafe/runtime features than the self-hosted na
 
 ## Library design
 
-The [standard-library design plan](hydrogen-standard-library-roadmap.md) proposes reusable layers for core types, memory, runtime, text, I/O, and Australis-specific services. Proposed `Hydrogen.*`/`Australis.*` package names and example APIs in that document are future designs, not imports currently supplied by this repository.
+The [standard-library design plan](ROADMAP.md) proposes reusable layers for core types, memory, runtime, text, I/O, and Australis-specific services. Proposed `Hydrogen.*`/`Australis.*` package names and example APIs in that document are future designs, not imports currently supplied by this repository. Australis's checked AUEX APIs and small native AUN1 loader are OS/compiler features, not packages from this repository.
