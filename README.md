@@ -44,7 +44,8 @@ Native names should be fully qualified. Strings are byte-based, file reads requi
 | `System.IO.File` text/existence | Native, AUEX, and SDK; AUEX text is limited to 255 bytes |
 | `System.IO.File` byte arrays | Native and SDK |
 | `System.Convert.ToInt32` | Native, AUEX, and SDK; returns `int` |
-| `System.Runtime.GC.Collect`/`GetAllocatedBytes` | Native source APIs |
+| `System.Runtime.GC.Collect` | Native source and development SDK C output; SDK interpreter treats it as a no-op |
+| `System.Runtime.GC.GetAllocatedBytes` | Native source only |
 | `System.Collections.List<T>` | SDK builtin only |
 | `System.Runtime.Buffer`, `Memory`, `BinaryPrimitives` | SDK builtins only |
 | `System.Testing.Assert` | SDK builtin only |

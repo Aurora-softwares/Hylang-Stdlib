@@ -2,6 +2,25 @@
 
 This document proposes future packages and APIs. None of the `Hydrogen.*` or `Australis.*` library layers shown here are installable implementations in this repository. Existing compiler/runtime `System.*` builtins are documented in the [usage guide](README.md) and [API reference](https://aurora-softwares.github.io/Hylang-Docs/runtime/builtins). Code in this plan illustrates proposed contracts rather than runnable current examples.
 
+## Ownership and starting gate
+
+This is a design sequence, not a completion checklist. A phase is complete only
+when its named `Hydrogen.*` or `Australis.*` package builds from this repository,
+its example runs on the stated target, and package tests pass. Existing compiler
+builtins and Australis kernel services do not satisfy that gate by themselves.
+
+| Work in this plan | Owning repository | Current boundary |
+| --- | --- | --- |
+| Language syntax, module/package resolution, native code generation, target profiles, and diagnostics under “Required Compiler Support” | Hylang-Compiler | The SDK and native compiler support different subsets. Project references and source closure exist; a standard-library lookup path and installable `Hydrogen.*` packages do not. |
+| `Hydrogen.Core`, Memory, Text, Runtime, and IO code, contracts, and package tests | Hylang-Stdlib | Proposed here; no `.hyproj` packages are shipped. |
+| Kernel and userspace syscall contracts, access checks, and native application loading | Australis-OS | AUEX services and a small AUN1 ring 3 path exist. General Hydrogen AUN1 output remains compiler work. |
+| `Australis.Kernel`, Userspace, and UI wrappers | Hylang-Stdlib, after the relevant OS contracts exist | Proposed APIs must match tested OS interfaces. |
+
+The first actionable library gate is a tiny `Hydrogen.Core` project consumed by
+another project, using a compiler-supported import form and a test on each
+claimed target. The illustrative `use` examples below are not working build
+instructions yet.
+
 ## Goal
 
 Build a fully usable Hydrogen standard library in small, practical phases.
